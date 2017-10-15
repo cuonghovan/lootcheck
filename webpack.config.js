@@ -44,7 +44,7 @@ config.resolve = {
 //
 if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
   config.entry = {
-    main: ['./src/main.js']
+    main: ["babel-polyfill", './src/main.js']
   };
   config.module = {
     loaders : [

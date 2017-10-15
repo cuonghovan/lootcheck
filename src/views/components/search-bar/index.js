@@ -1,0 +1,25 @@
+import React from 'react';
+
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onSearchBtnClick = this.onSearchBtnClick.bind(this);
+  }
+
+  onSearchBtnClick() {
+    let query = this.searchInput.value.trim();
+    this.props.handleSearch(query);
+  }
+
+  render() {
+    return(
+      <div className='search-bar'>
+        <input type='text' tabIndex='0'placeholder='Enter location' ref={c => this.searchInput = c} />
+        <button onClick={this.onSearchBtnClick}>Search</button>
+      </div>
+    );
+  }
+}
+
+export default SearchBar;
