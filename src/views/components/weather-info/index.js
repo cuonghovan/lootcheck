@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const WeatherInfo = ({data}) => {
   if(Object.keys(data).length === 0 && data.constructor === Object) {
@@ -16,6 +17,10 @@ const WeatherInfo = ({data}) => {
       </div>
     );
   }
-}
+};
+
+WeatherInfo.propTypes = {
+  data: PropTypes.object
+};
 
 export default WeatherInfo;

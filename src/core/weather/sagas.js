@@ -16,7 +16,7 @@ export function* fetchWeatherInfo({payload}) {
   if(response.status == 200) {
     yield put(weatherActions.fetchWeatherInfoSuccess(response.data));
   } else {
-    console.log('error');
+    console.log(response.message);
   }
 }
 

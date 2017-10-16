@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { weatherActions } from './../../../core/weather';
 import SearchBar from './../../components/search-bar';
@@ -10,6 +11,10 @@ class SearchBarContainer extends React.Component {
 
     this.handleSearch = this.handleSearch.bind(this);
   }
+
+  static propTypes = {
+    fetchWeatherInfo: PropTypes.func
+  };
 
   handleSearch(query) {
     this.props.fetchWeatherInfo(query)
@@ -24,6 +29,6 @@ class SearchBarContainer extends React.Component {
 
 const mapDispatchToProps = {
   fetchWeatherInfo: weatherActions.fetchWeatherInfo
-}
+};
 
 export default connect(null, mapDispatchToProps)(SearchBarContainer);

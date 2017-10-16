@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -6,6 +7,10 @@ class SearchBar extends React.Component {
 
     this.onSearchBtnClick = this.onSearchBtnClick.bind(this);
   }
+
+  static propTypes = {
+    handleSearch: PropTypes.func
+  };
 
   onSearchBtnClick() {
     let query = this.searchInput.value.trim();
