@@ -2,17 +2,17 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom'; 
 
 import Header from './components/header';
+import Weather from './pages/weather';
 import ClickCount from './pages/click-count';
-import Wheather from './pages/wheather';
 
 const App = () => (
   <div>
     <Header />
     <main>
       <Switch>
-        <Route exact path='/' component={ClickCount} />
+        <Route exact path='/' component={Weather} />
+        <Route exact path='/weather' component={Weather} />
         <Route exact path='/click-count' component={ClickCount} />
-        <Route exact path='/wheather' component={Wheather} />
       </Switch>
     </main>
   </div>

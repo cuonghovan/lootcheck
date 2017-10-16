@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WheatherInfo = ({data}) => {
+const WeatherInfo = ({data}) => {
   if(Object.keys(data).length === 0 && data.constructor === Object) {
     return(null);
   } else {
@@ -18,4 +18,4 @@ const WheatherInfo = ({data}) => {
   }
 }
 
-export default WheatherInfo;
+export default WeatherInfo;

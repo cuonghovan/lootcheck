@@ -1,7 +1,7 @@
-import { wheatherSagas } from './wheather';
+import { weatherSagas } from './weather';
 
 export default function* rootSaga() {
   yield [
-    ...wheatherSagas
+    ...weatherSagas
   ];
 }

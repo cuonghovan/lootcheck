@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { wheatherActions } from './../../../core/wheather';
+import { weatherActions } from './../../../core/weather';
 import SearchBar from './../../components/search-bar';
 
 class SearchBarContainer extends React.Component {
@@ -12,7 +12,7 @@ class SearchBarContainer extends React.Component {
   }
 
   handleSearch(query) {
-    this.props.fetchWheatherInfo(query)
+    this.props.fetchWeatherInfo(query)
   }
 
   render() {
@@ -23,7 +23,7 @@ class SearchBarContainer extends React.Component {
 }
 
 const mapDispatchToProps = {
-  fetchWheatherInfo: wheatherActions.fetchWheatherInfo
+  fetchWeatherInfo: weatherActions.fetchWeatherInfo
 }
 
 export default connect(null, mapDispatchToProps)(SearchBarContainer);
