@@ -4,14 +4,19 @@
   "description": "Facebook login for react app",
   "main": "index.js",
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ]
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development node app",
     "prebuild": "del-cli build",
     "build": "cross-env NODE_ENV=production webpack --display-chunks",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
