@@ -6,7 +6,11 @@ import App from './App';
 describe('App', () => {
   const app = shallow(<App />);
 
-  it('render correctly', () => {
+  it('renders correctly', () => {
     expect(app).toMatchSnapshot();
+  });
+
+  it('contains a connected Wallet component', () => {
+    expect(app.find('Connect(Wallet)').exists()).toBe(true);
   });
 });

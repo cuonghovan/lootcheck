@@ -68,6 +68,7 @@
     "redux-tdd": "^0.0.5",
     "rxjs": "^5.4.3",
     "sass-loader": "^6.0.6",
+    "sfcookies": "^1.0.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
