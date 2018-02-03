@@ -39,4 +39,4 @@ const mapDispatchToProps = {
   withdrawAction
 }
 
-export default connect((state) => ({ balance: state }), mapDispatchToProps)(Wallet);
+export default connect((state) => ({ balance: state.balance }), mapDispatchToProps)(Wallet);
